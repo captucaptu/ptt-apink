@@ -27,7 +27,7 @@ $(document).ready(function(){
 				});
 				var find = false;
 				for (var k = 0; k<bookers.length; k++) {
-					if(bookers[k][1]==pttid && bookers[k][9]==(tel.substring(1,tel.length))){
+					if(bookers[k][1]==pttid && (bookers[k][9]==(tel.substring(1,tel.length)) || bookers[k][9] == tel)){
 						booker = bookers[k];
 						$('li.pttid').text("PTT 帳號："+booker[1]);
 						$('li.name').text("訂購人："+booker[2]);
@@ -37,7 +37,8 @@ $(document).ready(function(){
 						$('li.poster').text("海報寄送："+booker[6]);
 						$('li.change').text("餘款處理："+booker[7]);
 						$('li.receive').text("收件人："+booker[8]);
-						$('li.tel').text("聯絡電話：0"+booker[9]);
+						if(bookers[k][9]==(tel.substring(1,tel.length))) $('li.tel').text("聯絡電話：0"+booker[9]);
+						if(bookers[k][9] == tel) $('li.tel').text("聯絡電話："+booker[9]);
 						$('li.adds').text("收件地址："+booker[10]);
 						//console.log(booker[12]);
 						if(booker[12]=="TRUE"){
