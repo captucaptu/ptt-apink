@@ -1,7 +1,35 @@
 $(document).ready(function(){
 	var key = '1aCJdNxlGT2VqckNxuxWWJPXNvNrb3SGgGuqmCN8ty0Y';
 	var userURL = 'https://spreadsheets.google.com/feeds/list/' + key + '/1/public/values?alt=json';
+	
+	queryTotal();
+	function queryTotal(){
+		var total = 0;
+		$.ajax({
+			url: userURL,
+			type: "GET",
+			dataType: "json",
+			success: function (json) {
+				var trowsRegex = /gsx\$/;
 
+				// 呈現表格 rows 資料
+				var trows = json.feed.entry;
+				$.each(trows, function (i, data) {
+					//console.log(data.gsx$訂購數量.$t);
+					total += Number(data.gsx$訂購數量.$t);
+					$('.total').html(total);
+				});
+				
+			},
+			//錯誤判斷
+			error: function () {
+				alert("資料讀取錯誤，請聯絡 captu");
+			}
+		});
+
+		
+	}
+	
 	function queryData(pttid,tel){
 		var bookers = [];
 		var booker = [];
@@ -19,7 +47,7 @@ $(document).ready(function(){
 					bookers[i]=[];
 					$.each(data, function (j, jdata){
 						if(rowsRegex.test(j)){
-							//console.log(jdata.$t);
+							console.log(jdata.$t);
 							//console.log(booker[i]);
 							bookers[i].push(jdata.$t);
 						}
@@ -46,6 +74,8 @@ $(document).ready(function(){
 						}else{
 							$('li.check').text("處理狀況：已填單，待確認款項與資料。");
 						}
+						$('li.trackno-1').text("郵件編號："+booker[13]);
+						$('li.trackno-2').text("郵件編號(海報)："+booker[14]);
 						//$('li.check').text("PTT 帳號："+booker[1]);
 						find = true;
 						break;
