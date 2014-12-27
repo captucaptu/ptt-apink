@@ -69,7 +69,7 @@ $(document).ready(function(){
 						$('li.adds').text("收件地址："+booker[8]);
 						$('li.post').text("取貨方式："+booker[10]);
 						//console.log(booker[12]);
-						if(booker[11]=="TRUE"){
+						if(booker[12]=="TRUE"){
 							$('li.check').text("處理狀況：匯款已確認收到。");
 						}else{
 							$('li.check').text("處理狀況：已填單，待確認款項與資料。");
@@ -77,6 +77,7 @@ $(document).ready(function(){
 						//$('li.trackno-1').text("郵件編號："+booker[14]);
 						//$('li.trackno-2').text("郵件編號(海報)："+booker[14]);
 						//$('li.check').text("PTT 帳號："+booker[1]);
+						console.log(booker);
 						find = true;
 						break;
 					}
