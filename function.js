@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	//docs.google.com/spreadsheets/d/12fM7M2yrhFMHQedH-npFE3A7BZkd_xX9wbIpmfFi4VY/edit?usp=sharing
-	var key = '12fM7M2yrhFMHQedH-npFE3A7BZkd_xX9wbIpmfFi4VY';
+	//var key = '12fM7M2yrhFMHQedH-npFE3A7BZkd_xX9wbIpmfFi4VY';
+	var key = '1jx2orws-yX_Bs-BsOIuOCu0sS7Tb8YSigx9N0cE7Ngs';
 	var userURL = 'https://spreadsheets.google.com/feeds/list/' + key + '/1/public/values?alt=json';
 	
 	queryTotal();
@@ -74,7 +75,7 @@ $(document).ready(function(){
 						}else{
 							$('li.check').text("處理狀況：已填單，待確認款項與資料。");
 						}
-						//$('li.trackno-1').text("郵件編號："+booker[14]);
+						$('li.trackno-1').text("郵件編號："+booker[13]);
 						//$('li.trackno-2').text("郵件編號(海報)："+booker[14]);
 						//$('li.check').text("PTT 帳號："+booker[1]);
 						console.log(booker);
