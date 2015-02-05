@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>推文計算程式</title>
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="jquery.xdomainajax.js"></script>
+	<script src="js/count-push.js"></script>
+	<link rel="stylesheet" href="css/count-push-style.css">
+</head>
+<body>
+	<form>
+		<ul class="form-list">
+			<li class="form-item">
+				<label for="url">網址：</label><input id="url" type="text" name="" value="" placeholder="">
+				<p class="hint">請輸入網頁版網址 (大Q)</p>
+			</li>
+			<li class="form-item">
+				<input id="push-1" type="radio" name="pushTag" value="1" placeholder="" checked><label for="push-1">推</label>
+				<input id="push-2" type="radio" name="pushTag" value="2" placeholder=""><label for="push-2">噓</label>
+				<input id="push-3" type="radio" name="pushTag" value="3" placeholder=""><label for="push-3">→</label>
+				<p class="hint">選擇欲另外計算推、噓或箭頭的數目</p>
+			</li>
+			<li class="form-item">
+				<label for="hignlight-line">樓層計算：</label><input id="hignlight-line" type="text" name="" value="" placeholder="">
+				<p class="hint">填入 4 則計算 4 的倍數的樓層</p>
+			</li>
+			<li class="form-item">
+				<label for="markTag">標記：</label>
+				<input id="mark-1" type="radio" name="markTag" value="1" placeholder="" checked><label for="mark-1">推文樓層</label>
+				<input id="mark-2" type="radio" name="markTag" value="2" placeholder=""><label for="mark-2">推文種類</label>
+				<p class="hint">選擇樓層計算以單純樓層計或者另外計算的推文種類</p>
+			</li>
+		</ul>
+		<br>
+		<a id='submit-btn' href="javascript:;" title="">GO</a>
+	</form>
+	<div class="test"></div>
+</body>
+
+</html>
