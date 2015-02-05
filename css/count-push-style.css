@@ -9,12 +9,12 @@
 }
 .floor{
 	display: inline-block;
-	width: 4em;
+	min-width: 4em;
 	color: #3fa83f;
 }
 .mark{
 	display: inline-block;
-	width: 4em;
+	min-width: 4em;
 	color: #3485e1;
 }
 .highlight{
