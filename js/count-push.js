@@ -1,4 +1,13 @@
 $(document).ready(function(){
+	$.ajaxSetup({
+    scriptCharset: "utf-8", //maybe "ISO-8859-1"
+    contentType: "application/json; charset=utf-8"
+});
+
+$.getJSON('https://www.ptt.cc/bbs/APINK/M.1429023601.A.DE2.html',
+    function(data) {
+      $(".test").html(data.contents);
+});
 	$('#submit-btn').click(function(){
 		var type = $('input[name="pushTag"]:checked').val();
 		var marktype = $('input[name="markTag"]:checked').val();
@@ -10,6 +19,7 @@ $(document).ready(function(){
 			success: function(res) {
 				var data = $(res.responseText).find('.push');
 				var count = 0;
+				console.log(res.responseText);
 				$('.test').empty();
 				data.each(function(index, cont){
 					$(this).prepend("<span class='floor'>"+(index+1)+" 樓 - </span><span class='mark'></span>");
@@ -43,6 +53,10 @@ $(document).ready(function(){
 
 					
 				});
+			},
+			//錯誤判斷
+			error: function (e) {
+				console.log(e);
 			}
 		});
 	})
