@@ -79,7 +79,7 @@ $(document).ready(function(){
 						$('li.adds').text("收件地址："+booker[10]);
 						$('li.post').text("取貨方式："+booker[7]);
 						//console.log(booker[12]);
-						if(booker[13]=="TRUE"){
+						if(booker[12]=="TRUE"){
 							$('li.check').text("處理狀況：匯款已確認收到。");
 						}else{
 							$('li.check').text("處理狀況：已填單，待確認款項與資料。");
