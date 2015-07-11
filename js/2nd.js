@@ -16,12 +16,20 @@ $(document).ready(function(){
 
 				// 呈現表格 rows 資料
 				var trows = json.feed.entry;
+				var red = 0;
+				var white = 0;
 				$.each(trows, function (i, data) {
-					//console.log(data.gsx$訂購數量.$t);
-					total += Number(data.gsx$訂購數量.$t);
-					$('.total').html(total);
+					if(i>1){
+						red += Number(data.gsx$red版訂購數量.$t);
+						white += Number(data.gsx$white版訂購數量.$t);
+					}
 				});
-				
+				total = (red+white);
+				$('.all span').html(total);
+				$('.red .bar').width(3 * red);
+				$('.red').append(red);
+				$('.white .bar').width(3 * white);
+				$('.white').append(white);
 			},
 			//錯誤判斷
 			error: function () {

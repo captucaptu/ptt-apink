@@ -6,11 +6,31 @@
 	<title>PTT-APINK 2 輯實銷打榜團訂單查詢</title>
 	<script src="jquery-1.11.0.min.js"></script>
 	<script src="js/2nd.js"></script>
-
+	
+	<style>
+		.red .bar{
+			background-color: #eb5656;
+			border: 1px solid #eb5656;
+		}
+		.white .bar{
+			background-color: white;
+			border: 1px solid #bbb;
+		}
+		.bar{
+			display: inline-block;
+			height: 0.9em;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+	</style>
 	
 </head>
 <body>
 	<h2>PTT-APINK 2 輯實銷打榜團訂單查詢</h2>
+	<p class="all">目前訂購數量：<span></span></p>
+	<p class="red"><span class="bar"></span></p>
+	<p class="white"><span class="bar"></span></p>
+
 	<p>請輸入帳號：<input type="text" name="ptt" value="" placeholder="" id="inputID"></p>
 	<p class="hint">請輸入您填單時的 ptt 帳號或是您所留下的 e-mail</p>
 	<p>請輸入電話：<input type="text" name="tel" value="" placeholder="" id="inputTEL"></p>
