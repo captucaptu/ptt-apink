@@ -26,9 +26,11 @@ $(document).ready(function(){
 				});
 				total = (red+white);
 				$('.all span').html(total);
-				$('.red .bar').width(3 * red);
+				//$('.red .bar').width(3 * red);
+				$('.red .bar').animate({width:(3 * red)+'px'},1000);
 				$('.red').append(red);
-				$('.white .bar').width(3 * white);
+				//$('.white .bar').width(3 * white);
+				$('.white .bar').animate({width:(3 * white)+'px'},1000);
 				$('.white').append(white);
 			},
 			//錯誤判斷
