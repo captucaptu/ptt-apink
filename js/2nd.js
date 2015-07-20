@@ -19,10 +19,9 @@ $(document).ready(function(){
 				var red = 0;
 				var white = 0;
 				$.each(trows, function (i, data) {
-					if(i>1){
 						red += Number(data.gsx$red版訂購數量.$t);
 						white += Number(data.gsx$white版訂購數量.$t);
-					}
+					
 				});
 				total = (red+white);
 				$('.all span').html(total);
