@@ -85,8 +85,8 @@ $(document).ready(function(){
 						}else{
 							$('li.check').text("處理狀況：已填單，待確認款項與資料。");
 						}
-						$('li.trackno-1').text("郵件編號："+booker[16]);
-						$('li.trackno-2').text("郵件編號(海報)："+booker[17]);
+						$('li.trackno-1').text("郵件編號："+booker[15]);
+						$('li.trackno-2').text("郵件編號(海報)："+booker[16]);
 						//$('li.check').text("PTT 帳號："+booker[1]);
 						//console.log(booker);
 						find = true;
