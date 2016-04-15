@@ -73,7 +73,7 @@ $(document).ready(function(){
 						
 						console.log(booker);
 						if(booker[10]=="TRUE"){
-							$('li.check').text("處理狀況：匯款已確認收到。");
+							$('li.check').text("處理狀況：款項已確認收到。");
 						}else{
 							$('li.check').text("處理狀況：已填單，待確認款項與資料。");
 						}
