@@ -96,8 +96,8 @@ $(document).ready(function() {
                         $('li.post').text("面交或郵寄：" + booker[6]);
                         $('li.point').text("面交地點：" + booker[7]);
                         $('li.adds').text("郵寄地址：" + booker[8]);
-                        if (bookers[k][5] == (tel.substring(1, tel.length))) $('li.tel').text("聯絡電話：0" + booker[8]);
-                        if (bookers[k][5] == tel) $('li.tel').text("聯絡電話：" + booker[8]);
+                        if (bookers[k][5] == (tel.substring(1, tel.length))) $('li.tel').text("聯絡電話：0" + booker[5]);
+                        if (bookers[k][5] == tel) $('li.tel').text("聯絡電話：" + booker[5]);
 
 
                         //console.log(booker);
