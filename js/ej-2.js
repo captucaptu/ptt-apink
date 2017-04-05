@@ -50,7 +50,7 @@ $(document).ready(function() {
                     bookers[i] = [];
                     $.each(data, function(j, jdata) {
                         if (rowsRegex.test(j)) {
-                            console.log(jdata.$t);
+                            // console.log(jdata.$t);
                             bookers[i].push(jdata.$t);
                         }
                     });
